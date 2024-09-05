@@ -1,0 +1,141 @@
+/* FONDO DE PANTALLA DE REGISTRO COLOR AZUL */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Fondo azul claro pastel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    overflow: auto; /* Permite el scroll si es necesario */
+}
+
+/* Estilo del contenedor del título */
+.title-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e0f7fa; 
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1000; 
+}
+
+/* Estilo del título animado */
+.animated-title {
+    font-size: 48px;
+    color: #ff8a80; /* Coral suave */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: bounceIn 2s ease-in-out;
+}
+
+/* FONDO DE PANTALLA DE REGISTRO */
+.registro-container {
+    min-height: 500px;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Permite el scroll si es necesario */
+    margin-top: 100px;
+}
+
+
+/* COLOR Y FUENTE PARA EL TITULO DE "REGISTRO" */
+.registro-title {
+    font-size: 2rem;
+    color: #00796b; /* Verde oscuro pastel */
+    margin-bottom: 20px;
+}
+
+.registro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo de los campos de entrada */
+.registro-form input[type="text"],
+.registro-form input[type="number"],
+.registro-form input[type="date"],
+.registro-form select,
+.registro-form input[type="password"] {
+    width: calc(100% - 24px); /* Ajusta el ancho para incluir el padding */
+    padding: 12px 15px;
+    border: 2px solid #ffccbc; /* Color coral pastel */
+    border-radius: 25px;
+    background-color: #fce4ec; /* Fondo rosa pálido */
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+/* Estilo de los campos de entrada en foco */
+.registro-form input[type="text"]:focus,
+.registro-form input[type="number"]:focus,
+.registro-form input[type="date"]:focus,
+.registro-form select:focus,
+.registro-form input[type="password"]:focus {
+    border-color: #ff8a80; /* Coral más oscuro */
+}
+
+
+/* SELECCIÓN DE AVATAR PARA EL USUARIO */
+.avatar-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.avatars {
+    display: flex;
+    gap: 20px;
+}
+
+.avatars label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.avatars input[type="radio"] {
+    display: none;
+}
+
+.avatars img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: border 0.3s ease;
+}
+
+.avatars input[type="radio"]:checked + img {
+    border-color: #00796b; /* Verde oscuro pastel */
+}
+
+/* BOTÓN DE REGISTRARSE */
+.registro-form button.registrarse {
+    width: 100%; /* Ajustado al ancho completo del contenedor */
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #b2ebf2; /* Azul pastel */
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* ANIMACIÓN AL MOMENTO DE PONER EL CURSOR EN EL BOTÓN */
+.registro-form button.registrarse:hover {
+    background-color: #80deea; /* Azul más intenso */
+}

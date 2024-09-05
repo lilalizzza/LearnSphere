@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.session-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.exercise-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.instruction {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.audio-container, .images-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.images-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.exercise-image {
+    width: 500px;
+    height: 500px;
+    margin: 0 10px;
+    border: 1px solid #ddd; /* Opcional: borde para ver las imágenes */
+}
+
+.answer-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.file-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.check-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.check-btn:hover {
+    background-color: #218838;
+}
+
+.button-bottom-left {
+    text-align: left;
+    bottom: 20px; /* Ajusta la distancia desde el borde inferior */
+    left: 20px;   /* Ajusta la distancia desde el borde izquierdo */
+}
+
+.action-btn3 {
+    background-color: #ff5722; /* Puedes cambiar el color según tu diseño */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn3:hover {
+    background-color: #e64a19; /* Cambia el color cuando el cursor pasa por encima */
+}
+
+.small-btn {
+    padding: 10px 20px;
+}

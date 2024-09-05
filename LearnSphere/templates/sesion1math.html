@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión 1 - Matemáticas</title>
+    <link rel="stylesheet" href="static/styles-math.css">
+</head>
+<body>
+    <div class="math-container">
+        <h1 class="session-title">Sesión 1 - Suma y Resta</h1>
+        <div id="exercise-container">
+            <div class="exercise" id="exercise-1">
+                <p class="instruction">Suma los objetos de las imágenes</p>
+                <div class="images-container">
+                    <img src="img1.png" alt="Imagen 1" class="exercise-image">
+                    <img src="img2.png" alt="Imagen 2" class="exercise-image">
+                </div>
+                <input type="number" id="answer-1" class="answer-input" placeholder="Tu respuesta">
+                <button class="check-btn" onclick="checkAnswer(1, 12)">Verificar</button>
+            </div>
+            <!-- Los siguientes ejercicios se ocultan inicialmente -->
+            <div class="exercise" id="exercise-2" style="display:none;">
+                <p class="instruction">Resta los objetos de las imágenes</p>
+                <div class="images-container">
+                    <img src="img3.png" alt="Imagen 1" class="exercise-image">
+                    <img src="img4.png" alt="Imagen 2" class="exercise-image">
+                </div>
+                <input type="number" id="answer-2" class="answer-input" placeholder="Tu respuesta">
+                <a href="porcentajesmath.html">
+                    <button class="check-btn" onclick="checkAnswer(2, 9)">Verificar</button>
+                </a>
+            </div>
+            <!-- Continúa con los demás ejercicios -->
+        </div>
+
+        <!-- Botón de regreso al dashboard -->
+        <div class="button-bottom-left">
+            <a href="matematicas.html">
+                <button class="action-btn3 small-btn">Regresar</button>
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        function checkAnswer(exerciseNumber, correctAnswer) {
+            const userAnswer = document.getElementById(`answer-${exerciseNumber}`).value;
+            if (parseInt(userAnswer) === correctAnswer) {
+                document.getElementById(`exercise-${exerciseNumber}`).style.display = 'none';
+                const nextExercise = document.getElementById(`exercise-${exerciseNumber + 1}`);
+                if (nextExercise) {
+                    nextExercise.style.display = 'block';
+                } else {
+                    alert("¡Felicidades! Has completado todos los ejercicios.");
+                }
+            } else {
+                alert("Respuesta incorrecta. Intenta de nuevo."); 
+            }
+        }
+    </script>
+</body>
+</html>

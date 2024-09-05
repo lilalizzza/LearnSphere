@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión 2 - Español</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-sesiones.css') }}">
+</head>
+<body>
+    <div class="exercise-container">
+        <h1 class="exercise-title">Español - Sesión 2</h1>
+
+        <!-- Ejercicio de Comprensión Auditiva -->
+        <div class="exercise" id="auditoryExercise">
+            <h2 class="instruction">Ejercicio de Comprensión Auditiva</h2>
+            <p class="instruction">Escucha el fragmento y responde la pregunta:</p>
+            <div class="audio-container">
+                <audio controls>
+                    <source src="static/audio/ej2ESP.mp3" type="audio/mpeg">
+                    Tu navegador no soporta la reproducción de audio.
+                </audio>
+            </div>
+            <p class="instruction">¿Cuál es el tema principal del fragmento?</p>
+            <input type="text" id="auditoryInput" class="answer-input" placeholder="Escribe tu respuesta">
+            <button class="check-btn" onclick="checkAuditory()">Enviar</button>
+            <p id="auditoryResult"></p>
+        </div>
+
+        <!-- Ejercicio Visual -->
+        <div class="exercise" id="visualExercise">
+            <h2 class="instruction">Ejercicio Visual</h2>
+            <p class="instruction">Observa la siguiente imagen y responde la pregunta:</p>
+            <div class="images-container">
+                <img src="static/img/ej3ESP.jpg" alt="Escena" class="exercise-image">
+            </div>
+            <p class="instruction">Describe brevemente la escena.</p>
+            <input type="text" id="visualInput" class="answer-input" placeholder="Escribe tu descripción">
+            <button class="check-btn" onclick="checkVisual()">Enviar</button>
+            <p id="visualResult"></p>
+        </div>
+
+        <!-- Ejercicio de Lectura/Escritura -->
+        <div class="exercise" id="readingExercise">
+            <h2 class="instruction">Ejercicio de Lectura/Escritura</h2>
+            <p class="instruction">Lee el siguiente párrafo y encuentra la palabra mal escrita:</p>
+            <p>"La maripoza voló rápidamente sobre las flores."</p>
+            <input type="text" id="readingInput" class="answer-input" placeholder="Escribe la palabra incorrecta">
+            <button class="check-btn" onclick="checkReading()">Enviar</button>
+            <p id="readingResult"></p>
+        </div>
+
+        <!-- Ejercicio Kinestésico -->
+        <div class="exercise" id="kinestheticExercise">
+            <h2 class="instruction">Ejercicio Kinestésico</h2>
+            <p class="instruction">Actúa la emoción descrita:</p>
+            <p>"Actúa como si estuvieras muy sorprendido por algo."</p>
+            <a href="{{ url_for('porcentajes') }}">
+            <button class="check-btn" onclick="checkKinesthetic()">Hecho</button></a>
+            <p id="kinestheticResult"></p>
+        </div>
+
+        <!-- Botón de regreso al dashboard -->
+        <div class="button-bottom-left">
+            <a href="{{ url_for('espanol') }}">
+                <button class="action-btn3 small-btn">Regresar</button>
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        function checkAuditory() {
+            const answer = "signos de puntuacion";  // Cambia esto por la respuesta correcta
+            const userAnswer = document.getElementById("auditoryInput").value.toLowerCase();
+            const result = document.getElementById("auditoryResult");
+
+            if (userAnswer === answer) {
+                result.innerText = "¡Correcto!";
+                result.style.color = "green";
+            } else {
+                result.innerText = "Intenta de nuevo.";
+                result.style.color = "red";
+            }
+        }
+
+        function checkVisual() {
+            const answer = "amigos leyendo";  // Cambia esto por la respuesta correcta
+            const userAnswer = document.getElementById("visualInput").value.toLowerCase();
+            const result = document.getElementById("visualResult");
+
+            if (userAnswer === answer) {
+                result.innerText = "¡Correcto!";
+                result.style.color = "green";
+            } else {
+                result.innerText = "Intenta de nuevo.";
+                result.style.color = "red";
+            }
+        }
+
+        function checkReading() {
+            const answer = "mariposa";  // Cambia esto por la respuesta correcta
+            const userAnswer = document.getElementById("readingInput").value.toLowerCase();
+            const result = document.getElementById("readingResult");
+
+            if (userAnswer === answer) {
+                result.innerText = "¡Correcto!";
+                result.style.color = "green";
+            } else {
+                result.innerText = "Intenta de nuevo.";
+                result.style.color = "red";
+            }
+        }
+
+        function checkKinesthetic() {
+            const result = document.getElementById("kinestheticResult");
+            result.innerText = "¡Muy bien hecho!";
+            result.style.color = "green";
+        }
+    </script>
+</body>
+</html>

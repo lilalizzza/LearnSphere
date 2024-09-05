@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes - LearnSphere</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ajustes-style.css') }}">
+</head>
+<body>
+    <div class="settings-container">
+        <h1>Ajustes</h1>
+        <div class="settings-section">
+            <h2>Idioma</h2>
+            <select>
+                <option>Español</option>
+                <option>Inglés</option>
+                <option>Francés</option>
+                <!-- Agrega más opciones si es necesario -->
+            </select>
+        </div>
+        <div class="settings-section">
+            <h2>Progreso y Logros</h2>
+            <p>Ver y gestionar el progreso y logros alcanzados.</p>
+        </div>
+        <div class="settings-section">
+            <h2>Seguridad y Privacidad</h2>
+            <p>Configura las opciones de seguridad y privacidad.</p>
+        </div>
+        <div class="settings-section">
+            <h2>Volumen</h2>
+            <input type="range" id="volume-slider" min="0" max="100" value="50">
+        </div>
+        <div class="settings-section">
+            <h2>Vibración</h2>
+            <label>
+                <input type="checkbox"> Activar vibración
+            </label>
+        </div>
+        <div class="button-bottom-left">
+            <a href="{{ url_for('dashboard') }}">
+                <button class="action-btn3 small-btn">Regresar</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const slider = document.getElementById('volume-slider');
+        slider.addEventListener('input', function() {
+            const value = slider.value;
+            slider.style.background = `linear-gradient(to right, #4caf50 ${value}%, #ddd ${value}%)`;
+        });
+
+        // Initial update
+        slider.style.background = `linear-gradient(to right, #4caf50 ${slider.value}%, #ddd ${slider.value}%)`;
+    </script>
+</body>
+</html>

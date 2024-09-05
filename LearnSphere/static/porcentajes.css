@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.results-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subject-result {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.subject-result h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.result-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-info p {
+    margin: 0;
+}
+
+#spanishPercentage {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#mathPercentage {
+    color: #28a745;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#geographyPercentage {
+    color: #dc3545;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.button-bottom-left {
+    text-align: left;
+    margin-top: 20px; /* Espacio entre el contenido y el botón */
+}
+
+.action-btn3 {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn3:hover {
+    background-color: #e64a19;
+}
+
+.small-btn {
+    padding: 10px 20px;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Español - Sesión 1</title>
+    <link rel="stylesheet" href="static/styles-espanol.css">
+</head>
+<body>
+    <div class="exercise-container">
+        <h1 class="exercise-title">Español - Sesión 1</h1>
+
+        <!-- Ejercicio Auditivo -->
+        <div class="exercise" id="auditoryExercise">
+            <h2 class="instruction">Ejercicio Auditivo</h2>
+            <p class="instruction">Escucha el audio y escribe la palabra que escuchaste:</p>
+            <div class="audio-container">
+                <audio controls>
+                    <source src="static/ej1.mp3" type="audio/mpeg">
+                    Tu navegador no soporta la reproducción de audio.
+                </audio>
+            </div>
+            <input type="text" id="auditoryInput" class="answer-input" placeholder="Escribe la palabra">
+            <button class="check-btn" onclick="checkAuditory()">Enviar</button>
+            <p id="auditoryResult"></p>
+        </div>
+
+        <!-- Ejercicio Visual -->
+        <div class="exercise" id="visualExercise">
+            <h2 class="instruction">Ejercicio Visual</h2>
+            <p class="instruction">Observa la imagen y escribe el nombre de lo que ves:</p>
+            <div class="images-container">
+                <img src="static/ej2.jpg" alt="Imagen 1" class="exercise-image">
+            </div>
+            <input type="text" id="visualInput" class="answer-input" placeholder="Escribe el nombre">
+            <button class="check-btn" onclick="checkVisual()">Enviar</button>
+            <p id="visualResult"></p>
+        </div>
+
+        <!-- Ejercicio de Lectura/Escritura -->
+        <div class="exercise" id="readingExercise">
+            <h2 class="instruction">Ejercicio de Lectura/Escritura</h2>
+            <p class="instruction">Lee el siguiente texto y responde la pregunta:</p>
+            <p>"El perro corrió rápidamente hacia el parque."</p>
+            <p>¿A dónde corrió el perro?</p>
+            <input type="text" id="readingInput" class="answer-input" placeholder="Escribe tu respuesta">
+            <button class="check-btn" onclick="checkReading()">Enviar</button>
+            <p id="readingResult"></p>
+        </div>
+
+        <!-- Ejercicio Kinestésico -->
+        <div class="exercise" id="kinestheticExercise">
+            <h2 class="instruction">Ejercicio Kinestésico</h2>
+            <p class="instruction">Imita el movimiento que se describe a continuación:</p>
+            <p>"Levanta tus brazos como si estuvieras saludando a alguien."</p>
+            <a href="porcentajes.html">
+                <button class="check-btn" onclick="checkKinesthetic()">Hecho</button>
+            </a>
+            <p id="kinestheticResult"></p>
+        </div>
+
+        <!-- Botón de regreso al dashboard -->
+        <div class="button-bottom-left">
+            <a href="espanol.html">
+                <button class="action-btn3 small-btn">Regresar</button>
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        function checkAuditory() {
+            const answer = "murcielago";  // Cambia esto por la palabra correcta
+            const userAnswer = document.getElementById("auditoryInput").value.toLowerCase();
+            const result = document.getElementById("auditoryResult");
+
+            if (userAnswer === answer) {
+                result.innerText = "¡Correcto!";
+                result.style.color = "green";
+            } else {
+                result.innerText = "Intenta de nuevo.";
+                result.style.color = "red";
+            }
+        }
+
+        function checkVisual() {
+            const answer = "elefante";  // Cambia esto por el nombre correcto
+            const userAnswer = document.getElementById("visualInput").value.toLowerCase();
+            const result = document.getElementById("visualResult");
+
+            if (userAnswer === answer) {
+                result.innerText = "¡Correcto!";
+                result.style.color = "green";
+            } else {
+                result.innerText = "Intenta de nuevo.";
+                result.style.color = "red";
+            }
+        }
+
+        function checkReading() {
+            const answer = "parque";  // Cambia esto por la respuesta correcta
+            const userAnswer = document.getElementById("readingInput").value.toLowerCase();
+            const result = document.getElementById("readingResult");
+
+            if (userAnswer === answer) {
+                result.innerText = "¡Correcto!";
+                result.style.color = "green";
+            } else {
+                result.innerText = "Intenta de nuevo.";
+                result.style.color = "red";
+            }
+        }
+
+        function checkKinesthetic() {
+            const result = document.getElementById("kinestheticResult");
+            result.innerText = "¡Muy bien hecho!";
+            result.style.color = "green";
+        }
+    </script>
+</body>
+</html>

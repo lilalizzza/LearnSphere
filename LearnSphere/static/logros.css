@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.achievements-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.achievements-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.achievement img {
+    width: 200px;
+    height: 200px;
+    margin-right: 3px;
+}
+
+.achievement p {
+    margin: 0;
+}
+
+.status {
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    color: green;
+}
+
+.not-obtained {
+    color: red;
+}
+
+.button-container {
+    text-align: left;
+    margin-top: 30px; /* Espacio adicional entre los logros y el botón */
+}
+
+.action-btn3 {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn3:hover {
+    background-color: #e64a19;
+}
+
+.small-btn {
+    padding: 10px 20px;
+}

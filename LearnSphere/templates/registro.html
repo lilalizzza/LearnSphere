@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - LearnSphere</title>
+    <link rel="stylesheet" href="../static/styless.css">
+</head>
+<body>
+    <div class="registro-container">
+        <h1 class="registro-title">Registro</h1>
+
+        <form action="db.php" method="post" class="registro-form">
+            <label for="full_name">Nombre Completo:</label>
+            <input type="text" placeholder="Nombre Completo" name="full_name" required>
+            <label for="birthdate">Fecha de Nacimiento:</label>
+            <input type="date" name="birthdate" id="birthdate" required>
+            <label for="school_year">Año de Escuela:</label>
+            <select name="school_year" id="school_year" required>
+                <option value="" disabled selected>Selecciona tu año de escuela</option>
+                <option value="1ero">1ero</option>
+                <option value="2do">2do</option>
+                <option value="3ro">3ro</option>
+                <option value="4to">4to</option>
+                <option value="5to">5to</option>
+                <option value="6to">6to</option>
+            </select>
+            <label for="user">Nombre de Usuario:</label>
+            <input type="text" placeholder="Nombre de Usuario" name="user" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" placeholder="Contraseña" name="password" required>
+            <div class="avatar-selection">
+                <label for="avatar">Selecciona tu avatar:</label>
+                <div class="avatars">
+                    <label>
+                        <input type="radio" name="avatar" value="avatar1.png" required>
+                        <img src="../static/img/avatar1.png" alt="Avatar 1">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" value="avatar2.png" required>
+                        <img src="../static/img/avatar2.png" alt="Avatar 2">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" value="avatar3.png" required>
+                        <img src="../static/img/avatar3.png" alt="Avatar 3">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" value="avatar4.png" required>
+                        <img src="../static/img/avatar4.png" alt="Avatar 4">
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="registrarse">Registrarse</button>
+        </form>
+        
+    </div>
+</body>
+</html>

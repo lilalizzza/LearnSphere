@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Geografía</title>
+    <link rel="stylesheet" href="static/styles-geografia.css">
+</head>
+<body>
+    <div class="exercise-container">
+        <h1 class="exercise-title">Geografía - Sesión 1</h1>
+
+        <!-- Ejercicio Auditivo -->
+        <div class="exercise" id="auditoryExercise">
+            <h2 class="instruction">Ejercicio Auditivo</h2>
+            <p class="instruction">Escucha la descripción del lugar y escribe su nombre:</p>
+            <div class="audio-container">
+                <audio controls>
+                    <source src="static/ej2GEO.mp3" type="audio/mpeg">
+                    Tu navegador no soporta la reproducción de audio.
+                </audio>
+            </div>
+            <input type="text" id="auditoryInput" class="answer-input" placeholder="Escribe el nombre del lugar">
+            <button class="check-btn" onclick="checkAuditory()">Enviar</button>
+            <p id="auditoryResult"></p>
+        </div>
+
+        <!-- Ejercicio Visual -->
+        <div class="exercise" id="visualExercise">
+            <h2 class="instruction">Ejercicio Visual</h2>
+            <p class="instruction">Observa el mapa y responde la siguiente pregunta:</p>
+            <div class="images-container">
+                <img src="static/paises.png" alt="Mapa de países" class="exercise-image">
+            </div>
+            <p class="instruction">¿Cuál es el país marcado en el mapa?</p>
+            <input type="text" id="visualInput" class="answer-input" placeholder="Escribe el nombre del país">
+            <button class="check-btn" onclick="checkVisual()">Enviar</button>
+            <p id="visualResult"></p>
+        </div>
+
+        <!-- Ejercicio de Lectura/Escritura -->
+        <div class="exercise" id="readingExercise">
+            <h2 class="instruction">Ejercicio de Lectura/Escritura</h2>
+            <p class="instruction">Lee el siguiente texto y responde la pregunta:</p>
+            <p>"El Amazonas es el río más largo del mundo. ¿En qué continente se encuentra?"</p>
+            <input type="text" id="readingInput" class="answer-input" placeholder="Escribe tu respuesta">
+            <button class="check-btn" onclick="checkReading()">Enviar</button>
+            <p id="readingResult"></p>
+        </div>
+
+        <!-- Ejercicio Kinestésico -->
+        <div class="exercise" id="kinestheticExercise">
+            <h2 class="instruction">Ejercicio Kinestésico</h2>
+            <p class="instruction">Imita el movimiento de la actividad:</p>
+            <p>"Haz el movimiento de un volcán en erupción: levanta los brazos y mueve las manos como si fueran lava."</p>
+            <a href="porcentajeGEO.html">
+                <button class="check-btn" onclick="checkKinesthetic()">Hecho</button>
+            </a>
+            <p id="kinestheticResult"></p>
+        </div>
+
+        <!-- Botón de regreso al dashboard -->
+        <div class="button-bottom-left">
+            <a href="geografia.html">
+                <button class="action-btn3 small-btn">Regresar</button>
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        function checkAuditory() {
+            const correctAnswer = "selva";  // Cambia esto por la respuesta correcta
+            const userAnswer = document.getElementById("auditoryInput").value.toLowerCase().trim();
+            const result = document.getElementById("auditoryResult");
+    
+            if (userAnswer === correctAnswer) {
+                result.innerText = "¡Correcto!";
+                result.style.color = "green";
+            } else {
+                result.innerText = "Intenta de nuevo.";
+                result.style.color = "red";
+            }
+        }
+    
+        function checkVisual() {
+            const correctAnswer = "mexico";  // Cambia esto por la respuesta correcta
+            const userAnswer = document.getElementById("visualInput").value.toLowerCase().trim();
+            const result = document.getElementById("visualResult");
+    
+            if (userAnswer === correctAnswer) {
+                result.innerText = "¡Correcto!";
+                result.style.color = "green";
+            } else {
+                result.innerText = "Intenta de nuevo.";
+                result.style.color = "red";
+            }
+        }
+    
+        function checkReading() {
+            const correctAnswer = "america";  // Cambia esto por la respuesta correcta
+            const userAnswer = document.getElementById("readingInput").value.toLowerCase().trim();
+            const result = document.getElementById("readingResult");
+    
+            if (userAnswer === correctAnswer) {
+                result.innerText = "¡Correcto!";
+                result.style.color = "green";
+            } else {
+                result.innerText = "Intenta de nuevo.";
+                result.style.color = "red";
+            }
+        }
+    
+        function checkKinesthetic() {
+            const result = document.getElementById("kinestheticResult");
+            result.innerText = "¡Muy bien hecho!";
+            result.style.color = "green";
+        }
+    </script>
+</body>
+</html>

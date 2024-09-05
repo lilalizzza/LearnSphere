@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-container {
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Agregado para que el botón esté posicionado dentro de este contenedor */
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.profile-photo {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    margin-right: 40px;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 3.1rem;
+    color: #333;
+}
+
+.profile-info p {
+    margin: 10px 0;
+    font-size: 2.0rem;
+    color: #555;
+}
+
+.progress-container {
+    width: 100%;
+    margin: 40px 0;
+}
+
+.progress-bar {
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 80px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.progress-bar div {
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.progress-bar .espanol {
+    background: #4caf50;
+    width: 70%; /* Cambia el valor según el porcentaje de progreso */
+}
+
+.progress-bar .matematicas {
+    background: #2196f3;
+    width: 80%; /* Cambia el valor según el porcentaje de progreso */
+}
+
+.progress-bar .geografia {
+    background: #ff9800;
+    width: 90%; /* Cambia el valor según el porcentaje de progreso */
+}
+
+.profile-stats {
+    margin-top: 40px;
+}
+
+.profile-stats div {
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    color: #333;
+}
+
+.profile-stats .label {
+    font-weight: bold;
+}
+
+.button-bottom-left {
+    position: absolute;
+    bottom: 20px; /* Ajusta la distancia desde el borde inferior */
+    left: 20px;   /* Ajusta la distancia desde el borde izquierdo */
+}
+
+.action-btn3 {
+    background-color: #ff5722; /* Puedes cambiar el color según tu diseño */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn3:hover {
+    background-color: #e64a19; /* Cambia el color cuando el cursor pasa por encima */
+}
+
+.small-btn {
+    padding: 10px 20px;
+}
